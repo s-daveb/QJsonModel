@@ -65,8 +65,9 @@ set_target_properties(QJsonModel PROPERTIES
 )
 
 
-package_library_headers(QJsonModel
-	${QJsonModel_TOP_SOURCE_DIR}/include
+publish_library_headers(
+	LIBRARY QJsonModel
+	HEADERS_DIR ${QJsonModel_TOP_SOURCE_DIR}/include
 )
 
 target_include_directories(QJsonModel PRIVATE ${QJsonModel_TOP_SOURCE_DIR}/include)
